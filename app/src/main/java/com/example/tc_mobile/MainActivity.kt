@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 val vm = AppViewModel()
 
-                NavHost(navController = navController, startDestination = "main",
+                NavHost(navController = navController, startDestination = "onboarding",
                     builder = {
                         composable("onboarding") {
                             OnboardingScreen(navController=navController, vm=vm)
