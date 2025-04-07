@@ -6,7 +6,7 @@ import androidx.compose.runtime.remember
 import androidx.lifecycle.ViewModel
 
 class AppViewModel: ViewModel() {
-    val first_name = ""
-    val last_name = ""
+    var first_name = ""
+    var last_name = ""
     val number_picked = 0
 }

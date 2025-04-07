@@ -22,9 +22,6 @@ import com.example.tc_mobile.components.CustomTextField
 
 @Composable
 fun OnboardingScreen(navController: NavController, vm: AppViewModel) {
-    var first_name by remember { mutableStateOf("") }
-    var last_name by remember { mutableStateOf("") }
-
     Column(
         modifier = Modifier.fillMaxHeight(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -36,8 +33,8 @@ fun OnboardingScreen(navController: NavController, vm: AppViewModel) {
             fontSize = 20.sp,
         )
 
-        CustomTextField(label="Please insert your name", value = first_name, onValueChange = { first_name = it })
-        CustomTextField(label="Please insert your age", value = last_name, onValueChange = { last_name = it })
+        CustomTextField(label="Please insert your name", value = vm.first_name, onValueChange = { vm.first_name = it })
+        CustomTextField(label="Please insert your age", value = vm.last_name, onValueChange = { vm.last_name = it })
 
         Box(
             contentAlignment = Alignment.Center,
